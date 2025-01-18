@@ -23,10 +23,11 @@
 }
 
 .nav-wrap {
-  background-color: #ffffff00;
+  /* background-color: #ffffff00; */
   position: sticky;
   top: 0;
   z-index: 999;
+  backdrop-filter: blur(5px);
 }
 
 .navs {
@@ -136,6 +137,7 @@
   top: 0;
   transform: translateY(100%);
   animation: slide-up 8s linear infinite;
+  font-family: SFProDisplayMedium;
 }
 
 @keyframes slide-up {
@@ -233,6 +235,7 @@
   font-weight: 500;
   font-size: 3.5rem;
   line-height: 66.83px;
+  font-family: SFProDisplayMedium;
 }
 
 .text-highlight {
@@ -251,7 +254,7 @@
   border-radius: 12px;
   padding: 12px;
   gap: 10px;
-  opacity: 80%;
+  opacity: 0.95;
   font-weight: 500;
   font-size: 16px;
   line-height: 19.09px;
@@ -259,12 +262,14 @@
   margin-top: 24px;
   letter-spacing: 0.05em;
   background-color: #ffffff;
+  font-family: SFProDisplay;
 }
 
 .btn:hover {
   color: #ffffff;
   background: var(--primary-color);
   border: solid var(--primary-color) 2px;
+  opacity: 1;
 }
 
 .container {
@@ -296,7 +301,7 @@
 
 .experience-text-normal {
 
-  font-family: SF Pro Display;
+  font-family: SFProDisplayMedium;
   font-size: 32px;
   font-weight: 500;
   line-height: 44.8px;
@@ -306,7 +311,7 @@
 }
 
 .experience-text-highlight {
-  font-family: SF Pro Display;
+  font-family: SFProDisplayMedium;
   font-size: 32px;
   font-weight: 500;
   line-height: 44.8px;
@@ -318,15 +323,8 @@
 .experience-description-text {
   font-weight: 400;
   font-size: 20px;
-  line-height: 28px;
-  color: #00000060;
-}
-
-.experience-description-text {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  color: #00000060;
+  line-height: 36px;
+  color: #000000A0;
 }
 
 .skill {

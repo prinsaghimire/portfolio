@@ -1,6 +1,16 @@
 @font-face {
   font-family: "SFProDisplay";
-  src: local("./fonts/SFProDisplay.OTF");
+  src: url('../fonts/SFProDisplay.OTF');
+}
+
+@font-face {
+  font-family: "SFProDisplayBold";
+  src: url('../fonts/SFProDisplayBold.OTF');
+}
+
+@font-face {
+  font-family: "SFProDisplayMedium";
+  src: url('../fonts/SFProDisplayMedium.OTF');
 }
 
 * {
