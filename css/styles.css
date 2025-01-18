@@ -1,8 +1,8 @@
 :root {
   --primary-color: #1206FA;
   --bg-color: #FCF8F8;
-  --font-size: clamp(48px, 4.2vw, 5rem);
-  --line-height: clamp(58px, 5.05vw, 6rem);
+  --font-size: clamp(48px, 7vw, 5rem);
+  --line-height: clamp(58px, 8.4vw, 6rem);
 }
 
 #overlay {
@@ -18,6 +18,10 @@
 
 #hamburger {
   display: none;
+}
+
+.text-white {
+  color: #ffffff;
 }
 
 .side-nav {
@@ -242,7 +246,7 @@
 }
 
 .text-highlight {
-  font-weight: 700;
+  font-weight: 500;
   font-size: var(--font-size);
   line-height: var(--line-height);
   letter-spacing: 1%;
@@ -514,13 +518,14 @@
   }
 
   .side-nav {
-    background-color: #ffffff;
+    /* background-color: var(--primary-color); */
+    background-color: #070270;
     position: fixed;
     right: 0;
     top: 0;
     z-index: 1000;
     height: 100vh;
-    min-width: 40%;
+    min-width: 50%;
     display: none;
     flex-direction: column;
     justify-content: start;
@@ -541,7 +546,7 @@
     justify-content: center;
     align-items: center;
     border-radius: 8px;
-    border: solid 2px var(--primary-color);
+    border: solid 2px #ffffff;
     width: 32px;
     height: 32px;
   }
