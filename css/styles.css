@@ -3,6 +3,7 @@
   --bg-color: #FCF8F8;
   --font-size: clamp(48px, 7vw, 5rem);
   --line-height: clamp(58px, 8.4vw, 6rem);
+  --black-50: #00000050;
 }
 
 #overlay {
@@ -12,7 +13,7 @@
   top: 0;
   left: 0;
   display: none;
-  background-color: #00000050;
+  background-color: var(--black-50);
   z-index: 1;
 }
 
@@ -33,14 +34,14 @@
   top: 0;
   z-index: 999;
   backdrop-filter: blur(5px);
+  padding-bottom: 16px;
 }
 
 .navs {
   width: calc(100vw - 60px);
   max-width: 1184px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto;
   height: 64px;
-  margin-bottom: 64px;
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -283,7 +284,7 @@
 .container {
   width: calc(100vw - 60px);
   max-width: 1184px;
-  margin: 0 auto 30px auto;
+  margin: 30px auto 30px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
