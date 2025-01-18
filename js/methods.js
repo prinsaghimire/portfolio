@@ -7,13 +7,11 @@ window.addEventListener("load", (event) => {
   const overlay = document.getElementById('overlay');
 
   hamburger.addEventListener('click', (event) => {
-    console.log('hamburger cliced');
     sideNav.style.display = 'flex';
     overlay.style.display = 'block';
   });
 
   closeSideNav.addEventListener('click', (event) => {
-    console.log('close clicked');
     sideNav.style.display = 'none';
     overlay.style.display = 'none';
   });
