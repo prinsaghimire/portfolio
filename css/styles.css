@@ -1,6 +1,8 @@
 :root {
   --primary-color: #1206FA;
   --bg-color: #FCF8F8;
+  --font-size: clamp(48px, 4.2vw, 5rem);
+  --line-height: clamp(58px, 5.05vw, 6rem);
 }
 
 #overlay {
@@ -23,7 +25,6 @@
 }
 
 .nav-wrap {
-  /* background-color: #ffffff00; */
   position: sticky;
   top: 0;
   z-index: 999;
@@ -113,11 +114,12 @@
 }
 
 .profile-picture {
-  width: 100%;
+  width: 80%;
   object-fit: cover;
   aspect-ratio: 1/1;
   border-radius: 40px;
   box-shadow: 0px 0px 10px gray;
+  float: right;
 }
 
 .hidden {
@@ -127,7 +129,7 @@
 .animated-text-container {
   position: relative;
   /* Same as h1 line-height */
-  height: 66.83px;
+  height: var(--line-height);
   overflow: hidden;
 }
 
@@ -229,19 +231,20 @@
   background-color: var(--primary-color);
   color: #ffffff;
   text-align: center;
+  padding: 8px 0;
 }
 
 .text-h1 {
   font-weight: 500;
-  font-size: 3.5rem;
-  line-height: 66.83px;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
   font-family: SFProDisplayMedium;
 }
 
 .text-highlight {
   font-weight: 700;
-  font-size: 3.5rem;
-  line-height: 66.82px;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
   letter-spacing: 1%;
 }
 
@@ -404,6 +407,7 @@
 }
 
 .personal-message {
+  width: 100%;
   margin: 30px 0px;
   display: flex;
   justify-content: center;
@@ -415,7 +419,16 @@
   font-family: SFProDisplayMedium;
   width: 50%;
   font-weight: 500;
-  font-size: 32px;
+  font-size: var(--font-size);
+}
+
+.personal-message-header {
+  dispaly: inline-block;
+}
+
+.personal-message-header .purple {
+  font-weight: bold;
+  line-height: var(--line-height);
 }
 
 .personal-message-description {
@@ -425,12 +438,28 @@
   padding: 32px;
 }
 
+@media only screen and (max-width: 992px) {
+  .profile-picture {
+    width: 100%;
+  }
+}
+
 @media only screen and (max-width: 575px) {
   .introduction {
     flex-direction: column;
   }
   .introduction-text {
     width: 100%;
+  }
+
+  .text-h1, .text-highlight {
+    font-size: calc(var(--font-size)*1.4);
+    line-height: calc(var(--line-height)*1.4);
+  }
+
+  .animated-text-container {
+    /* Same as h1 line-height */
+    height: calc(var(--line-height)*1.4);
   }
 
   .introduction-image {
@@ -467,6 +496,7 @@
 
   .personal-message-header {
     width: 100%;
+    display: inline-flex;
   }
 
   .personal-message-description {
