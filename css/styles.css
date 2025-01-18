@@ -263,6 +263,7 @@
   letter-spacing: 0.05em;
   background-color: #ffffff;
   font-family: SFProDisplay;
+  cursor: pointer;
 }
 
 .btn:hover {
@@ -320,7 +321,7 @@
   text-decoration-skip-ink: none;
 }
 
-.experience-description-text {
+.experience-description-text, .personal-message-description-text {
   font-weight: 400;
   font-size: 20px;
   line-height: 36px;
@@ -336,7 +337,8 @@
   width: 100%;
 }
 
-.skill-text {
+.skill-text, .skill-text .purple {
+  font-family: SFProDisplayMedium;
   width: 50%;
   font-weight: 500;
   font-size: 32px;
@@ -371,7 +373,8 @@
   gap: 30px;
 }
 
-.work-text {
+.work-text, .work-text .purple {
+  font-family: SFProDisplayMedium;
   font-weight: 500;
   font-size: 32px;
   line-height: 72px;
@@ -408,7 +411,8 @@
   gap: 30px;
 }
 
-.personal-message-header {
+.personal-message-header, .personal-message-header .purple {
+  font-family: SFProDisplayMedium;
   width: 50%;
   font-weight: 500;
   font-size: 32px;
@@ -419,13 +423,6 @@
   background-color: var(--bg-color);
   border-radius: 24px;
   padding: 32px;
-}
-
-.personal-message-description-text {
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 28px;
-  color: #00000060;
 }
 
 @media only screen and (max-width: 575px) {
