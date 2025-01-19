@@ -1,9 +1,30 @@
 :root {
+  --bg-site: #ffffff;
+  --text-color: #000000;
   --primary-color: #1206FA;
   --bg-color: #FCF8F8;
   --font-size: clamp(48px, 7vw, 5rem);
   --line-height: clamp(58px, 8.4vw, 6rem);
   --black-50: #00000050;
+  --bg-btn: #46464600;
+  --border-btn: #000000;
+  --work-img-shadow-color: var(--primary-color);
+}
+
+.dark-mode {
+  --bg-site: #010101;
+  --text-color: #ffffff;
+  --primary-color: #393597;
+  --bg-btn: #464646ff;
+  --border-btn: #464646ff;
+  --bg-color: #232327;
+  --work-img-shadow-color: var(--text-color);
+}
+
+body {
+  background: var(--bg-site);
+  transition: background-color 0.3s, color 0.3s;
+  color: var(--text-color);
 }
 
 #overlay {
@@ -15,6 +36,21 @@
   display: none;
   background-color: var(--black-50);
   z-index: 1;
+}
+
+#theme-toggle {
+  position: fixed;
+  left: calc(50% + min(562px, (100vw - 60px) / 2) - 64px);
+  bottom: 64px;
+  width: 64px;
+  height: 64px;
+  background: var(--primary-color);
+  border-radius: 64px;
+  text-align: center;
+  /* centers vertically */
+  line-height: 64px;
+  z-index: 1000;
+  box-shadow: 0px 0px 5px 1px gray;
 }
 
 #hamburger {
@@ -258,7 +294,7 @@
 }
 
 .btn {
-  border: solid #000000 2px;
+  border: solid var(--border-btn) 2px;
   border-radius: 12px;
   padding: 12px;
   gap: 10px;
@@ -269,9 +305,10 @@
   letter-spacing: 5%;
   margin-top: 24px;
   letter-spacing: 0.05em;
-  background-color: #ffffff;
+  background-color: var(--bg-btn);
   font-family: SFProDisplay;
   cursor: pointer;
+  color: var(--text-color);
 }
 
 .btn:hover {
@@ -330,10 +367,10 @@
 }
 
 .experience-description-text, .personal-message-description-text {
+  color: var(--text-color);
   font-weight: 400;
   font-size: 20px;
   line-height: 36px;
-  color: #000000A0;
 }
 
 .skill {
@@ -408,7 +445,7 @@
 }
 
 .work-img:hover {
-  box-shadow: 0px 0px 8px 0px var(--primary-color);
+  box-shadow: 0px 0px 8px 0px var(--work-img-shadow-color);
 }
 
 .personal-message {
@@ -519,8 +556,7 @@
   }
 
   .side-nav {
-    /* background-color: var(--primary-color); */
-    background-color: #070270;
+    background-color: var(--primary-color);
     position: fixed;
     right: 0;
     top: 0;

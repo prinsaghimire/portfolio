@@ -9,12 +9,19 @@
     <link href="./assets/css/fontawesome.css" rel="stylesheet" />
     <link href="./assets/css/brands.css" rel="stylesheet" />
     <link href="./assets/css/solid.css" rel="stylesheet" />
+    <link href="./assets/css/regular.css" rel="stylesheet" />
     <link href="./assets/css/sharp-thin.css" rel="stylesheet" />
     <link href="./assets/css/duotone-thin.css" rel="stylesheet" />
     <link href="./assets/css/sharp-duotone-thin.css" rel="stylesheet" />
     <script type="text/javascript" src="./js/methods.js"></script>
   </head>
   <body>
+    <!-- Theme Toggle -->
+    <div id="theme-toggle">
+      <i id='dark-icon' class="fa-regular fa-moon" style="color: #ffffff;"></i>
+      <i id='light-icon' class="fa-regular fa-lightbulb"></i>
+    </div>
+
     <!-- Dark Overlay -->
     <div id="overlay"></div>
 
@@ -36,7 +43,9 @@
     <div class="nav-wrap">
       <div class="navs">
         <div id="home" class="nav-home">
-          <img src="./images/home.svg">
+        <svg width="100%" height="100%" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10 2.69L15 7.19V15H13V9H7V15H5V7.19L10 2.69ZM10 0L0 9H3V17H9V11H11V17H17V9H20L10 0Z" fill="var(--text-color)"/>
+</svg>
         </div>
         <div class="nav-links">
           <div id="hamburger" class="hamburger">
@@ -166,7 +175,7 @@
 
       <div class="personal-message">
         <div class="personal-message-header">
-          <div>Get in</div>
+          <div>Get in&nbsp</div>
           <div class="purple bold">Touch.</div>
         </div>
 
