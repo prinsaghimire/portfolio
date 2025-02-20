@@ -1,6 +1,7 @@
 :root {
   --bg-site: #ffffff;
   --text-color: #000000;
+  --text-color-97: #00000097;
   --primary-color: #1206FA;
   --bg-color: #FCF8F8;
   --font-size: clamp(48px, 7vw, 5rem);
@@ -373,6 +374,10 @@ body {
   line-height: 36px;
 }
 
+.experience-description-text {
+  color: var(--text-color-97);
+}
+
 .skill {
   margin: 30px 0px;
   display: flex;
@@ -430,10 +435,23 @@ body {
   gap: 32px;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .work-image {
   width: 100%;
+  max-width: calc(50% - 16px);
+}
+
+.work-slug {
+  font-size: 16px;
+  color: var(--text-color-97);
+  margin: 16px auto;
+}
+
+.work-description {
+  font-size: 28px;
+  color: var(--text-color-97);
 }
 
 .work-img {
