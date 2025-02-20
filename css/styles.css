@@ -15,6 +15,7 @@
 .dark-mode {
   --bg-site: #010101;
   --text-color: #ffffff;
+  --text-color-97: #ffffff97;
   --primary-color: #393597;
   --bg-btn: #464646ff;
   --border-btn: #464646ff;
