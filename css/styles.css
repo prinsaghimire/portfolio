@@ -178,6 +178,7 @@ body {
   border-radius: 40px;
   box-shadow: 0px 0px 10px gray;
   float: right;
+  background-color: #ffffffa0;
 }
 
 .hidden {
