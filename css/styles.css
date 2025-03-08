@@ -18,7 +18,7 @@
   --text-color: #ffffff;
   --text-color-59: #ffffff59;
   --text-color-97: #ffffff97;
-  --primary-color: #393597;
+  --primary-color: #0c00b6;
   --bg-btn: #464646ff;
   --border-btn: #464646ff;
   --bg-color: #232327;
@@ -153,6 +153,13 @@ body {
   height: 32px;
 }
 
+.w-750 {
+  max-width: 750px;
+}
+
+.w-600 {
+  max-width: 600px;
+}
 .introduction-text {
   max-width: 60%;
 }
@@ -353,6 +360,10 @@ body {
   gap: 30px;
   justify-content: space-between;
   align-items: center;
+}
+
+.bg-bg-site {
+  background-color: var(--bg-site);
 }
 
 .experience-description {

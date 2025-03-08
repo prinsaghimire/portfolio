@@ -8,7 +8,6 @@ window.addEventListener("load", (event) => {
   const darkIcon = document.getElementById("dark-icon");
 
   const isDarkMode = document.body.classList.contains("dark-mode");
-  console.log(isDarkMode);
   // Toggle icon visibility
   lightIcon.style.display = isDarkMode ? "inline" : "none";
   darkIcon.style.display = isDarkMode ? "none" : "inline";
@@ -30,7 +29,7 @@ window.addEventListener("load", (event) => {
   const yearSpan = document.getElementById("year");
   yearSpan.innerHTML = new Date().getFullYear();
 
-  const homeBtn = document.getElementById('home');
+  const homeBtn = document.getElementsByClassName('nav-home')[0];
   homeBtn.addEventListener('click', (event) => {
     window.scrollTo(0, 0);
   })
