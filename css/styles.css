@@ -681,6 +681,7 @@ body {
 
 .cs-01-img, .design-process-img {
   width: 100%;
+  display: block;
 }
 
 .cs-01-img {
