@@ -951,11 +951,27 @@ body {
   }
 }
 
+@media only screen and (max-width: 700px) {
+  .introduction-image, .introduction-text {
+    max-width: 50%;
+  }
+}
+
+
 @media only screen and (max-width: 575px) {
   .introduction {
     flex-direction: column;
   }
+
+  .introduction-image, .introduction-text {
+    max-width: 100%;
+  }
+  
   .introduction-text {
+    width: 100%;
+  }
+
+  .introduction-image {
     width: 100%;
   }
 
@@ -967,10 +983,6 @@ body {
   .animated-text-container {
     /* Same as h1 line-height */
     height: calc(var(--line-height)*1.4);
-  }
-
-  .introduction-image {
-    width: 100%;
   }
 
   .experience {
