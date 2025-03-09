@@ -18,7 +18,7 @@
   --text-color: #ffffff;
   --text-color-59: #ffffff59;
   --text-color-97: #ffffff97;
-  --primary-color: #0c00b6;
+  --primary-color: #4639f7;
   --bg-btn: #464646ff;
   --border-btn: #464646ff;
   --bg-color: #232327;
@@ -491,7 +491,7 @@ body {
 }
 
 .work-description {
-  font-size: clamp(20px, 20px, 4vw);
+  font-size: clamp(20px, 28px, 4vw);
   color: var(--text-color-97);
 }
 
