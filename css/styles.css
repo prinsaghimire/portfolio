@@ -14,14 +14,14 @@
 }
 
 .dark-mode {
-  --bg-site: #010101;
+  --bg-site: #212222;
   --text-color: #ffffff;
   --text-color-59: #ffffff59;
   --text-color-97: #ffffff97;
-  --primary-color: #4639f7;
+  --primary-color: #2c1fec;
   --bg-btn: #464646ff;
   --border-btn: #464646ff;
-  --bg-color: #232327;
+  --bg-color: #2b2b30;
   --themed-white-or-primary: var(--text-color);
 }
 
@@ -692,6 +692,9 @@ body {
 /* } */
 
 .case-study-intro-texts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   max-width: 50%;
 }
 
