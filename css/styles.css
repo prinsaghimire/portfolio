@@ -721,17 +721,19 @@ body {
 .case-study-stat {
   background: var(--bg-color);
   border-radius: 8px;
-  padding: 16px;
+  padding: 16px 24px;
 }
 
 .stat-title {
   font-weight: bold;
   font-size: 20px;
+  line-height: 1.5;
 }
 
 .stat-detail {
   font-size: 20px;
   color: var(--text-color-97);
+  line-height: 1.5;
 }
 
 .case-study-description-text {
