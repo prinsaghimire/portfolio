@@ -728,6 +728,7 @@ body {
   font-weight: bold;
   font-size: 20px;
   line-height: 1.5;
+  letter-spacing: 1px;
 }
 
 .stat-detail {
@@ -751,6 +752,7 @@ body {
 .case-study-impact {
   font-weight: bold;
   font-size: 20px;
+  letter-spacing: 1px;
 }
 
 .design-process-text > p {
@@ -759,6 +761,7 @@ body {
 
 .emphasis {
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .design-process-user {
@@ -769,6 +772,7 @@ body {
 
 .user-name {
   font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .design-process-user-details {
