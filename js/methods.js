@@ -20,8 +20,10 @@ window.addEventListener("load", (event) => {
   }
   lightIcon.style.display = isDarkMode ? "inline" : "none";
   darkIcon.style.display = isDarkMode ? "none" : "inline";
-  workI.src = getComputedStyle(document.documentElement).getPropertyValue("--work-three-image");
-  workII.src = getComputedStyle(document.documentElement).getPropertyValue("--work-one-image");
+  if (workI) {
+    workI.src = getComputedStyle(document.documentElement).getPropertyValue("--work-three-image");
+    workII.src = getComputedStyle(document.documentElement).getPropertyValue("--work-one-image");
+  }
 
 
   hamburger.addEventListener('click', (event) => {
@@ -60,8 +62,10 @@ window.addEventListener("load", (event) => {
       document.documentElement.style.setProperty('--work-three-image', './images/work_3.png');
       document.documentElement.style.setProperty('--work-one-image', './images/work_1.png');
     }
-    workI.src = getComputedStyle(document.documentElement).getPropertyValue("--work-three-image");
-    workII.src = getComputedStyle(document.documentElement).getPropertyValue("--work-one-image");
+    if (workI) {
+      workI.src = getComputedStyle(document.documentElement).getPropertyValue("--work-three-image");
+      workII.src = getComputedStyle(document.documentElement).getPropertyValue("--work-one-image");
+    }
   });
 
   // Load saved theme on page load
