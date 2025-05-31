@@ -6,14 +6,22 @@ window.addEventListener("load", (event) => {
   const overlay = document.getElementById('overlay');
   const lightIcon = document.getElementById("light-icon");
   const darkIcon = document.getElementById("dark-icon");
+  const workI = document.getElementById("work-i");
+  const workII = document.getElementById("work-ii");
 
   const isDarkMode = document.body.classList.contains("dark-mode");
   // Toggle icon visibility
+  if (isDarkMode) {
+    document.documentElement.style.setProperty('--work-three-image', './images/work_3_dark.png');
+    document.documentElement.style.setProperty('--work-one-image', './images/work_1_dark.png');
+  } else {
+    document.documentElement.style.setProperty('--work-three-image', './images/work_3.png');
+    document.documentElement.style.setProperty('--work-one-image', './images/work_1.png');
+  }
   lightIcon.style.display = isDarkMode ? "inline" : "none";
   darkIcon.style.display = isDarkMode ? "none" : "inline";
-
-
-
+  workI.src = getComputedStyle(document.documentElement).getPropertyValue("--work-three-image");
+  workII.src = getComputedStyle(document.documentElement).getPropertyValue("--work-one-image");
 
 
   hamburger.addEventListener('click', (event) => {
@@ -43,11 +51,17 @@ window.addEventListener("load", (event) => {
       localStorage.setItem("theme", "dark");
       lightIcon.style.display =  "inline";
       darkIcon.style.display = "none";
+      document.documentElement.style.setProperty('--work-three-image', './images/work_3_dark.png');
+      document.documentElement.style.setProperty('--work-one-image', './images/work_1_dark.png');
     } else {
       lightIcon.style.display =  "none";
       darkIcon.style.display = "inline";
       localStorage.setItem("theme", "light");
+      document.documentElement.style.setProperty('--work-three-image', './images/work_3.png');
+      document.documentElement.style.setProperty('--work-one-image', './images/work_1.png');
     }
+    workI.src = getComputedStyle(document.documentElement).getPropertyValue("--work-three-image");
+    workII.src = getComputedStyle(document.documentElement).getPropertyValue("--work-one-image");
   });
 
   // Load saved theme on page load
