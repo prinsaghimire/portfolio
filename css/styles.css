@@ -1,6 +1,7 @@
 :root {
   --bg-site: #ffffff;
   --text-color: #000000;
+  --text-color-cc: #000000cc;
   --text-color-97: #00000097;
   --text-color-59: #00000059;
   --btn-text-color: #ffffff;
@@ -21,6 +22,7 @@
   --text-color: #ffffff;
   --text-color-59: #ffffff59;
   --text-color-97: #ffffff97;
+  --text-color-cc: #ffffffcc;
   --btn-text-color: #000000;
   --primary-color: #AEA8FF;
   --bg-btn: #212222;
@@ -69,7 +71,7 @@ body {
 
 /* Texts */
 .text-white {
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 .text-responsive {
@@ -86,6 +88,10 @@ body {
 
 .text-white-97 {
   color: var(--text-color-97);
+}
+
+.text-white-cc {
+  color: var(--text-color-cc);
 }
 
 .side-nav {
@@ -786,6 +792,7 @@ body {
 
 .design-process-user-details {
   font-size: clamp(12px, 20px, 4vw);
+  line-height: clamp(24px, 40px, 8vw);
 }
 
 .bullets-inside {
@@ -915,6 +922,18 @@ body {
 
   .design-process-users {
     flex-direction: column;
+  }
+
+  .design-process-user-image {
+    width: 30%;
+  }
+
+  .design-process-user-details {
+    width: 70%;
+  }
+
+  .design-process-user-img {
+    width: 100%;
   }
 
   .design-process-text {
