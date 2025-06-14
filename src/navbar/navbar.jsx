@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMoon } from "@fortawesome/free-regular-svg-icons";
 import { faLightbulb } from "@fortawesome/free-regular-svg-icons";
@@ -7,10 +7,9 @@ import { faMedium } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faX } from "@fortawesome/free-solid-svg-icons";
-import { useLocation, useNavigate } from "react-router";
 import NavbarProvider from "./navbarContext";
 import { useNavbar } from "./navbarContext";
-import { Link } from "react-router";
+import { PageContext } from "../pageContext";
 
 export function Navbar() {
   return (
@@ -31,15 +30,14 @@ export function NavWrap() {
 
   const { lightBg, darkBg } = useNavbar();
 
-  const location = useLocation();
-  const navigate = useNavigate();
-  const isHome = location.pathname === "/";
+  const page = useContext(PageContext)
+  const isHome = page === 'home';
 
   const handleHomeClick = () => {
     if (isHome) {
       window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     } else {
-      navigate("/");
+      window.location.assign('/');
     }
   };
 
@@ -145,7 +143,7 @@ function ThemeToggler() {
       {!loading && (
         <div
           id="theme-toggle"
-          className="size-[64px] rounded-full text-center leading-[64px] bg-primary z-1000 shadow-[0px_0px_5px_1px_gray] fixed bottom-[64px] left-[calc(50%+min(562px,calc((100vw-60px)/2))-64px)]"
+          className="size-[64px] rounded-full text-center leading-[64px] bg-primary z-1000 shadow-[0px_0px_5px_1px_gray] fixed bottom-[64px] left-[calc(50%+min(562px,calc((100vw-60px)/2))-64px)] cursor-pointer"
           onClick={() => handleSwitchTheme()}
         >
           <FontAwesomeIcon
@@ -253,12 +251,12 @@ function NavIcon({ href, icon }) {
   };
 
   return (
-    <Link to={href} target="_blank" rel="noopener noreferrer">
+    <a href={href} target="_blank" rel="noopener noreferrer">
       <span
         className={`flex justify-center items-center rounded-[8px] size-[32px] border-[2px] border-solid ${borderLightColors[lightText]} ${borderDarkColors[darkText]}`}
       >
         <FAIcon icon={icon} />
       </span>
-    </Link>
+    </a>
   );
 }

@@ -1,22 +1,30 @@
-import { Routes, Route, Link, useLocation } from 'react-router-dom'
 import { Portfolio } from './portfolio/portfolio'
 import { ArtsyEcommerce } from './artsy-ecommerce/artsy-ecommerce'
+import { useContext } from 'react';
+import { PageContext } from './pageContext'
 
-export default function App() {
-
-  const location = useLocation();
-
+export default function App({ page }) {
   const backgroundClass =
-    location.pathname === "/showcase/artsy-ecommerce"
+    page === "artsy-ecommerce"
       ? "bg-primary"
       : "bg-site";
 
+  const component = () => {
+    switch (page) {
+      case 'home':
+        return <Portfolio />;
+      case 'artsy-ecommerce':
+        return <ArtsyEcommerce />
+      default:
+        return <Portfolio />;
+    }
+  };
+
   return (
     <div className={`${backgroundClass} transition-colors duration-300 font-sfpro text-[16px]`}>
-      <Routes>
-        <Route path="/" element={<Portfolio />} />
-        <Route path="/showcase/artsy-ecommerce" element={<ArtsyEcommerce />} />
-      </Routes>
+      <PageContext value={page} >
+        { component() }
+      </PageContext>
     </div>
   )
 }

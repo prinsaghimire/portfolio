@@ -1,16 +1,16 @@
 import { createContext, useContext, useMemo } from "react";
 import { ReactNode } from "react";
-import { useLocation } from "react-router";
+import { PageContext } from "../pageContext";
 
 export const NavbarContext = createContext();
 
 const NavbarProvider = ({ children }) => {
-  const location = useLocation();
+  const page = useContext(PageContext);
 
   const navbarClasses = useMemo(() => {
-    const path = location.pathname;
+    const path = page;
 
-    if (path === "/") {
+    if (path === "home") {
       return {
         lightHamburger: "white",
         darkHamburger: "white",
@@ -29,7 +29,7 @@ const NavbarProvider = ({ children }) => {
         darkText: "black",
       };
     }
-  }, [location.pathname]);
+  }, [page]);
 
   return (
     <NavbarContext.Provider value={navbarClasses}>

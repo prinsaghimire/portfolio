@@ -15,7 +15,6 @@ import artsy_ecommerce_light from "./work_3.png";
 import artsy_ecommerce_dark from "./work_3_dark.png";
 import gamification_light from "./work_1.png";
 import gamification_dark from "./work_1_dark.png";
-import { Link } from "react-router";
 
 export function Portfolio() {
   return (
@@ -163,7 +162,7 @@ function SkillIcon({ icon }) {
 function Showcase() {
   const showCaseData = [
     {
-      href: "/showcase/artsy-ecommerce",
+      href: "./artsy-ecommerce.html",
       slug: "UI/UX Case Study",
       lightImage: artsy_ecommerce_light,
       darkImage: artsy_ecommerce_dark,
@@ -210,9 +209,9 @@ function ShowCasePiece({
 }) {
   return (
     <div className="w-full max-w-[calc(50%-16px)] flex flex-col">
-      <Link to={href}>
+      <a href={href} target="_blank">
         <ShowCaseImage lightImage={lightImage} darkImage={darkImage} />
-      </Link>
+      </a>
 
       <div className="my-[16px] my-0 uppercase tracking-[2px] text-black-59 text-[clamp(12px,16px,2vw)]">
         {slug}
