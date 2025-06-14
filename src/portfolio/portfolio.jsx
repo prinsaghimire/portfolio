@@ -182,7 +182,7 @@ function Showcase() {
       <div className="w-full font-sfpro-medium font-[500] text-[32px] leading-[44.8px] text-black">
         Latest <span className="text-primary">work.</span>
       </div>
-      <div className="flex justify-between flex-wrap gap-[32px]">
+      <div className="flex justify-between flex-col sm:flex-row flex-wrap gap-[32px]">
         {showCaseData.map(function (data, idx) {
           return (
             <ShowCasePiece
@@ -208,7 +208,7 @@ function ShowCasePiece({
   description,
 }) {
   return (
-    <div className="w-full max-w-[calc(50%-16px)] flex flex-col">
+    <div className="w-full sm:max-w-[calc(50%-16px)] flex flex-col">
       <a href={href} target="_blank">
         <ShowCaseImage lightImage={lightImage} darkImage={darkImage} />
       </a>

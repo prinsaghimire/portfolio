@@ -3,7 +3,7 @@ import { PGLinkButton } from "../button/button";
 export default function GetInTouch() {
   return (
     <div className="my-[40px] w-full flex flex-col gap-[32px] sm:flex-row justify-between items-center font-[500]">
-      <div className="w-full sm:max-w-[50%] inline-flex sm:block text-normal leading-normal align-left text-black p-[32px]">
+      <div className="w-full sm:max-w-[50%] inline-flex sm:block text-normal leading-normal align-left text-black pr-[32px]">
         <div>Get in</div>
         <div className="text-primary font-sfpro-medium font-bold">Touch.</div>
       </div>
