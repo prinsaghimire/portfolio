@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "SFProDisplay";
+  src: url("/fonts/SFProDisplay.OTF");
+}
+
+@font-face {
+  font-family: "SFProDisplayBold";
+  src: url("/fonts/SFProDisplayBold.OTF");
+}
+
+@font-face {
+  font-family: "SFProDisplayMedium";
+  src: url("/fonts/SFProDisplayMedium.OTF");
+}
+
+:root {
+  --pg-primary: #1206fa;
+  --pg-background: #fcf8f8;
+  --pg-white: #ffffffff;
+  --pg-white-cc: #ffffffcc;
+  --pg-white-97: #ffffff97;
+  --pg-white-59: #ffffff95;
+  --pg-black: #000000;
+  --pg-black-cc: #000000cc;
+  --pg-black-97: #00000097;
+  --pg-black-59: #00000059;
+  --pg-border-btn: #000000;
+  --pg-background-btn: #46464600;
+  --pg-background-site: #ffffff;
+
+  --font-size: clamp(42px, 6vw, 5rem);
+  --line-height: clamp(51px, 7.2vw, 6rem);
+}
+
+.dark {
+  --pg-primary: #aea8ff;
+  --pg-background: #2b2b30;
+  --pg-white: #000000ff;
+  --pg-white-cc: #000000cc;
+  --pg-white-97: #00000097;
+  --pg-white-59: #00000059;
+  --pg-black: #ffffff;
+  --pg-black-cc: #ffffffcc;
+  --pg-black-97: #ffffff97;
+  --pg-black-59: #ffffff59;
+  --pg-border-btn: #f8f8f880;
+  --pg-background-btn: #212222;
+  --pg-background-site: #212222;
+}
+
+@theme {
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --breakpoint-xxl: 1400px;
+  --font-sfpro: "SFProDisplay", "Inter", sans-serif;
+  --font-sfpro-medium: "SFProDisplayMedium", "Inter", sans-serif;
+  --font-sfpro-bold: "SFProDisplayBold", "Inter", sans-serif;
+  --color-white: var(--pg-white);
+  --color-white-cc: var(--pg-white-cc);
+  --color-white-97: var(--pg-white-97);
+  --color-white-59: var(--pg-white-59);
+  --color-black: var(--pg-black);
+  --color-black-cc: var(--pg-black-cc);
+  --color-black-97: var(--pg-black-97);
+  --color-black-59: var(--pg-black-59);
+  --color-primary: var(--pg-primary);
+  --color-background: var(--pg-background);
+  --color-border-btn: var(--pg-border-btn);
+  --color-background-btn: var(--pg-background-btn);
+  --color-site: var(--pg-background-site);
+  --text-normal: var(--font-size);
+  --leading-normal: var(--line-height);
+  --text-14: calc(var(--font-size) * 1.4);
+  --leading-14: calc(var(--line-height) * 1.4);
+}
