@@ -210,9 +210,9 @@ function ShowCasePiece({
 }) {
   return (
     <div className="w-full max-w-[calc(50%-16px)] flex flex-col">
-      <a href={href} target="_blank">
+      <Link to={href}>
         <ShowCaseImage lightImage={lightImage} darkImage={darkImage} />
-      </a>
+      </Link>
 
       <div className="my-[16px] my-0 uppercase tracking-[2px] text-black-59 text-[clamp(12px,16px,2vw)]">
         {slug}
