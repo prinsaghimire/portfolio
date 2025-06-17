@@ -1,6 +1,7 @@
 import { Navbar } from "../navbar/navbar";
 import { Footer } from "../footer/footer";
 import { PGLinkButton } from "../button/button";
+import Spacer from '../spacer/spacer';
 import GetInTouch from "../get-in-touch/get-in-touch";
 import artsyIntro from "./artsy-intro.png";
 import artsyContext from "./artsy-context.png";
@@ -52,7 +53,7 @@ function Intro() {
           <div className="text-[clamp(16px,20px,5vw)] tracking-[4px] uppercase text-white my-[16px]">
             UX Case Study
           </div>
-          <div className="text-[clamp(36px,64px,6vw)] leading-[calc(clamp(36px,64px,6vw)*1.4)] font-extrabold text-white">
+          <div className="text-[clamp(36px,64px,6vw)] leading-[calc(clamp(36px,64px,6vw)*1.4)] font-sfpro-bold text-white">
             Designing an Art E‑Commerce Experience
           </div>
         </div>
@@ -71,7 +72,7 @@ function Context() {
         <div className="text-[clamp(16px,20px,5vw)] tracking-[4px] uppercase text-black-59">
           Context
         </div>
-        <div className="text-[clamp(36px,64px,6vw)] leading-[calc(clamp(36px,64px,6vw)*1.4)] font-extrabold text-black">
+        <div className="text-subheading leading-subheading font-extrabold text-black">
           Bringing Art to the Digital Marketplace
         </div>
         <div className="font-normal text-[20px] leading-[36px] text-black-97">
@@ -106,7 +107,7 @@ function Impact() {
         <div className="text-[clamp(16px,20px,5vw)] tracking-[4px] uppercase text-black-59">
           Context
         </div>
-        <div className="text-[clamp(36px,64px,6vw)] leading-[calc(clamp(36px,64px,6vw)*1.4)] font-extrabold text-black">
+        <div className="text-subheading leading-subheading font-extrabold text-black">
           My Impact
         </div>
         <div className="flex flex-col rounded-[16px] bg-background p-[32px] gap-[16px] font-normal text-[20px] leading-[36px]">
@@ -209,12 +210,12 @@ function DesignProcess() {
         <div className="text-[clamp(16px,20px,5vw)] tracking-[4px] uppercase text-black-59">
           Context
         </div>
-        <div className="text-[clamp(36px,64px,6vw)] leading-[calc(clamp(36px,64px,6vw)*1.4)] font-extrabold text-black">
+        <div className="text-subheading leading-subheading font-extrabold text-black">
           Understanding the Users
         </div>
       </div>
       <div className="flex flex-col gap-[32px] md:flex-row">
-        <div className="flex flex-col gap-[16px] md:w-[50%]">
+        <div className="flex flex-col justify-center gap-[16px] md:w-[50%]">
           <p className="text-[20px] leading-[36px] text-black-97">
             My approach began with understanding the two primary user groups:
             Buyers and Artists.
@@ -238,6 +239,7 @@ function DesignProcess() {
           <img src={artsyDesignProcess} />
         </div>
       </div>
+      <Spacer height={'xs'} />
       <div className="flex flex-col md:flex-row gap-[32px]">
         {characters.map(function (data, idx) {
           return <Character key={idx} data={data} />;
@@ -300,8 +302,8 @@ function DSApproach() {
       <div className="text-[clamp(16px,20px,5vw)] tracking-[4px] uppercase text-black-59">
         Design Process
       </div>
-      <div className="text-[clamp(36px,64px,6vw)] leading-[calc(clamp(36px,64px,6vw)*1.4)] font-extrabold text-black max-w-[750px] text-center">
-        Standardizing the design (Design System Approach)
+      <div className="text-subheading leading-subheading font-extrabold text-black max-w-[750px] text-center">
+        Standardizing the design <br /> (Design System Approach)
       </div>
       <div className="text-[20px] leading-[36px] max-w-[600px] text-center text-black-97">
         To create a structured and consistent experience, I leveraged the{" "}
@@ -370,11 +372,11 @@ function Validation() {
   return (
     <div className="w-[calc(100vw-60px)] max-w-[1184px] my-[32px] mx-auto flex flex-col items-center justify-center gap-[32px]">
       <div className="flex flex-col md:flex-row gap-[32px]">
-        <div className="flex flex-col gap-[16px] md:max-w-[50%]">
+        <div className="flex flex-col justify-center gap-[16px] md:max-w-[50%]">
           <div className="text-[clamp(16px,20px,5vw)] tracking-[4px] uppercase text-black-59">
             validation
           </div>
-          <div className="text-[clamp(24px,48px,6vw)] leading-[calc(clamp(24px,48px,6vw)*1.4)] font-extrabold text-black">
+          <div className="text-subheading leading-subheading font-extrabold text-black">
             Usability Testing and Insights
           </div>
           <div className="text-[20px] leading-[36px] text-black-97">
@@ -399,7 +401,7 @@ function Validation() {
           <img src={artsyValidationMain} />
         </div>
       </div>
-
+      <Spacer height={'sm'} />
       <div className="flex flex-col md:flex-row gap-[32px] text-[20px] leading-[36px]">
         {validationData.slice(0, 2).map(function (data, idx) {
           return <ValidationTask key={idx} data={data} />;
@@ -493,7 +495,7 @@ function Results() {
       <div className="text-[clamp(16px,20px,5vw)] tracking-[4px] uppercase text-black-59">
         Results
       </div>
-      <div className="text-[clamp(36px,64px,6vw)] leading-[calc(clamp(36px,64px,6vw)*1.4)] font-extrabold text-black">
+      <div className="text-subheading leading-subheading font-extrabold text-black">
         Enhancing the Art Buying Experience
       </div>
 

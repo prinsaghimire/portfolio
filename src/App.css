@@ -78,4 +78,6 @@
   --leading-normal: var(--line-height);
   --text-14: calc(var(--font-size) * 1.4);
   --leading-14: calc(var(--line-height) * 1.4);
+  --text-subheading: calc(clamp(36px, 48px, 5vw));
+  --leading-subheading: calc(clamp(36px, 48px, 5vw) * 1.4);
 }
