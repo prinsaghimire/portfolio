@@ -7,7 +7,7 @@ import { PGLinkButton } from "../button/button";
 const showcaseData = [
   {
     key: 'artsy',
-    href: "./artsy-ecommerce.html",
+    href: "./artsy-ecommerce",
     slug: "UI/UX Case Study",
     lightImage: artsy_ecommerce_light,
     darkImage: artsy_ecommerce_dark,
