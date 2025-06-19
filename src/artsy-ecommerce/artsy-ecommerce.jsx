@@ -253,7 +253,7 @@ function Character({
   data,
 }) {
   return (
-    <div className="bg-background rounded-[16px] p-[16px]">
+    <div className="bg-background rounded-[16px] p-[32px]">
       <div className="flex flex-col gap-[16px]">
         <div className="flex gap-[16px]">
           <div className="max-w-[30%]">
@@ -421,7 +421,7 @@ function ValidationTask({
   data,
 }) {
   return (
-    <div className="flex flex-col gap-[16px] rounded-[16px] bg-background p-[16px] w-full md:max-w-[50%] text-black-97">
+    <div className="flex flex-col gap-[16px] rounded-[16px] bg-background p-[32px] w-full md:max-w-[50%] text-black-97">
       <img src={data.image} />
       <p className="font-bold tracking-[1px] text-black">{data.heading}</p>
       <p>
@@ -512,7 +512,7 @@ function ResultSection({
   data,
 }) {
   return (
-    <div className="bg-background rounded-[16px] p-[16px] flex flex-col gap-[32px] text-[20px] leading-[36px] w-full md:max-w-[50%]">
+    <div className="bg-background rounded-[16px] p-[32px] flex flex-col gap-[32px] text-[20px] leading-[36px] w-full md:max-w-[50%]">
       <p className="font-bold tracking-[1px] text-black-cc">{data.heading}</p>
 
       {data.details.map(function (det, idx) {
