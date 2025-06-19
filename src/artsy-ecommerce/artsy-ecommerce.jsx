@@ -50,7 +50,7 @@ function Intro() {
     <div className="bg-primary">
       <div className="w-[calc(100vw-60px)] max-w-[1184px] mt-[32px] mx-auto flex flex-col md:flex-row items-center gap-[32px]">
         <div className="flex flex-col justify-center md:w-[50%]">
-          <div className="text-[clamp(16px,20px,5vw)] tracking-[4px] uppercase text-white my-[16px]">
+          <div className="text-slug tracking-[4px] uppercase text-white my-[16px]">
             UX Case Study
           </div>
           <div className="text-[clamp(36px,64px,6vw)] leading-[calc(clamp(36px,64px,6vw)*1.4)] font-sfpro-bold text-white">
@@ -69,7 +69,7 @@ function Context() {
   return (
     <div className="w-[calc(100vw-60px)] max-w-[1184px] my-[32px] mx-auto flex flex-col md:flex-row items-center gap-[32px]">
       <div className="flex flex-col gap-[16px] md:w-[50%]">
-        <div className="text-[clamp(16px,20px,5vw)] tracking-[4px] uppercase text-black-59">
+        <div className="text-slug tracking-[4px] uppercase text-black-59">
           Context
         </div>
         <div className="text-subheading leading-subheading font-extrabold text-black">
@@ -104,7 +104,7 @@ function Impact() {
   return (
     <div className="w-[calc(100vw-60px)] max-w-[1184px] my-[32px] mx-auto flex flex-col md:flex-row-reverse items-center gap-[32px]">
       <div className="flex flex-col gap-[16px] md:w-[50%]">
-        <div className="text-[clamp(16px,20px,5vw)] tracking-[4px] uppercase text-black-59">
+        <div className="text-slug tracking-[4px] uppercase text-black-59">
           Context
         </div>
         <div className="text-subheading leading-subheading font-extrabold text-black">
@@ -207,7 +207,7 @@ function DesignProcess() {
   return (
     <div className="w-[calc(100vw-60px)] max-w-[1184px] my-[32px] mx-auto flex flex-col items-start gap-[32px]">
       <div className="flex flex-col gap-[16px]">
-        <div className="text-[clamp(16px,20px,5vw)] tracking-[4px] uppercase text-black-59">
+        <div className="text-slug tracking-[4px] uppercase text-black-59">
           Context
         </div>
         <div className="text-subheading leading-subheading font-extrabold text-black">
@@ -299,7 +299,7 @@ function Character({
 function DSApproach() {
   return (
     <div className="w-[calc(100vw-60px)] max-w-[1184px] my-[32px] mx-auto flex flex-col items-center justify-center gap-[32px]">
-      <div className="text-[clamp(16px,20px,5vw)] tracking-[4px] uppercase text-black-59">
+      <div className="text-slug tracking-[4px] uppercase text-black-59">
         Design Process
       </div>
       <div className="text-subheading leading-subheading font-extrabold text-black max-w-[750px] text-center">
@@ -373,7 +373,7 @@ function Validation() {
     <div className="w-[calc(100vw-60px)] max-w-[1184px] my-[32px] mx-auto flex flex-col items-center justify-center gap-[32px]">
       <div className="flex flex-col md:flex-row gap-[32px]">
         <div className="flex flex-col justify-center gap-[16px] md:max-w-[50%]">
-          <div className="text-[clamp(16px,20px,5vw)] tracking-[4px] uppercase text-black-59">
+          <div className="text-slug tracking-[4px] uppercase text-black-59">
             validation
           </div>
           <div className="text-subheading leading-subheading font-extrabold text-black">
@@ -492,7 +492,7 @@ function Results() {
 
   return (
     <div className="w-[calc(100vw-60px)] max-w-[1184px] my-[32px] mx-auto flex flex-col items-start justify-center gap-[32px]">
-      <div className="text-[clamp(16px,20px,5vw)] tracking-[4px] uppercase text-black-59">
+      <div className="text-slug tracking-[4px] uppercase text-black-59">
         Results
       </div>
       <div className="text-subheading leading-subheading font-extrabold text-black">
