@@ -6,13 +6,14 @@ export function PGButton({ btnText }) {
   );
 }
 
-export function PGLinkButton({
-  btnText,
-  btnLink,
-  download = "",
-}) {
+export function PGLinkButton({ btnText, btnLink, download = "" }) {
   return download !== "" ? (
-    <a href={btnLink} target="_blank" download={download} rel="noopener noreferrer">
+    <a
+      href={btnLink}
+      target="_blank"
+      download={download}
+      rel="noopener noreferrer"
+    >
       <PGButton btnText={btnText} />
     </a>
   ) : (

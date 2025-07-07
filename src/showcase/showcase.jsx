@@ -1,46 +1,65 @@
-import artsy_ecommerce_light from "./work_3.png";
-import artsy_ecommerce_dark from "./work_3_dark.png";
-import gamification_light from "./work_1.png";
-import gamification_dark from "./work_1_dark.png";
+import artsyEcommerceLight from "./work_3.png";
+import artsyEcommerceDark from "./work_3_dark.png";
+import gamificationLight from "./work_1.png";
+import gamificationDark from "./work_1_dark.png";
+import ticketingLight from './ticketing_showcase_light.png';
+import ticketingDark from './ticketing_showcase_dark.png';
 import { PGLinkButton } from "../button/button";
 
 const showcaseData = [
   {
-    key: 'artsy',
+    key: "artsy",
     href: "./artsy-ecommerce",
     slug: "UI/UX Case Study",
-    lightImage: artsy_ecommerce_light,
-    darkImage: artsy_ecommerce_dark,
+    lightImage: artsyEcommerceLight,
+    darkImage: artsyEcommerceDark,
     description: "Designing an Art E‑Commerce Website Experience",
-  }, {
-    key: 'gamification',
+  },
+  {
+    key: "gamification",
     href: "https://www.behance.net/gallery/210114643/Gamification-of-a-Coffee-Ordering-App",
     slug: "UI/UX Case Study",
-    lightImage: gamification_light,
-    darkImage: gamification_dark,
+    lightImage: gamificationLight,
+    darkImage: gamificationDark,
     description: "Gamifying a Coffee Ordering App To increase user engagement",
-  }
-]
+  },
+  {
+    key: "ticketing",
+    href: "./ticketing-system",
+    slug: "UI DESIGN CASE STUDY",
+    lightImage: ticketingLight,
+    darkImage: ticketingDark,
+    description: "Reimagining Tech Support: A Ticketing System for ETSU ITS",
+  },
+];
 
 const getHeadline = (headline) => {
   switch (headline) {
-    case 'my_latest_works':
-      return (<>My Latest <span className="text-primary">Works</span></>);
-    case 'my_other_works':
-      return (<>My Other <span className="text-primary">Works</span></>);
+    case "my_latest_works":
+      return (
+        <>
+          My Latest <span className="text-primary">Works</span>
+        </>
+      );
+    case "my_other_works":
+      return (
+        <>
+          My Other <span className="text-primary">Works</span>
+        </>
+      );
     default:
-      return (<></>);
+      return <></>;
   }
-}
+};
 
-
-export function Showcase({ headline, keysToInclude } ) {
-  const filteredData = showcaseData.filter(showcaseItem => keysToInclude.includes(showcaseItem.key));
-
-    return (
+export function Showcase({ headline, keysToInclude }) {
+  const filteredData = showcaseData.filter((showcaseItem) =>
+    keysToInclude.includes(showcaseItem.key),
+  );
+  return (
     <div className="w-full my-[40px] flex flex-col gap-[32px]">
       <div className="w-full font-sfpro-medium font-[500] text-[32px] leading-[44.8px] text-black">
-        My Latest <span className="text-primary">Works</span>
+        {getHeadline(headline)}
       </div>
       <div className="flex justify-between flex-col sm:flex-row flex-wrap gap-[32px]">
         {filteredData.map(function (data, idx) {
@@ -60,13 +79,7 @@ export function Showcase({ headline, keysToInclude } ) {
   );
 }
 
-function ShowCasePiece({
-  href,
-  slug,
-  lightImage,
-  darkImage,
-  description,
-}) {
+function ShowCasePiece({ href, slug, lightImage, darkImage, description }) {
   return (
     <div className="w-full sm:max-w-[calc(50%-16px)] flex flex-col">
       <a href={href} target="_blank">
@@ -85,10 +98,7 @@ function ShowCasePiece({
   );
 }
 
-function ShowCaseImage({
-  lightImage,
-  darkImage,
-}) {
+function ShowCaseImage({ lightImage, darkImage }) {
   return (
     <>
       <img

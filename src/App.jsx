@@ -1,30 +1,29 @@
-import { Portfolio } from './portfolio/portfolio'
-import { ArtsyEcommerce } from './artsy-ecommerce/artsy-ecommerce'
-import { useContext } from 'react';
-import { PageContext } from './pageContext'
+import { Portfolio } from "./portfolio/portfolio";
+import { ArtsyEcommerce } from "./artsy-ecommerce/artsy-ecommerce";
+import { TicketingSystem } from "./ticketing-system/ticketing-system";
+import { PageContext } from "./pageContext";
 
 export default function App({ page }) {
-  const backgroundClass =
-    page === "artsy-ecommerce"
-      ? "bg-primary"
-      : "bg-site";
+  const backgroundClass = page === "home" ? "bg-site" : "bg-primary";
 
   const component = () => {
     switch (page) {
-      case 'home':
+      case "home":
         return <Portfolio />;
-      case 'artsy-ecommerce':
-        return <ArtsyEcommerce />
+      case "artsy-ecommerce":
+        return <ArtsyEcommerce />;
+      case "ticketing-system":
+        return <TicketingSystem />;
       default:
         return <Portfolio />;
     }
   };
 
   return (
-    <div className={`${backgroundClass} transition-colors duration-300 font-sfpro text-[16px]`}>
-      <PageContext value={page} >
-        { component() }
-      </PageContext>
+    <div
+      className={`${backgroundClass} transition-colors duration-300 font-sfpro text-[16px]`}
+    >
+      <PageContext value={page}>{component()}</PageContext>
     </div>
-  )
+  );
 }

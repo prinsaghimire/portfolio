@@ -1,11 +1,11 @@
 import { Navbar } from "../navbar/navbar";
 import { Footer } from "../footer/footer";
 import { PGLinkButton } from "../button/button";
-import Spacer from '../spacer/spacer';
+import { Results } from "../results/results";
+import Spacer from "../spacer/spacer";
 import GetInTouch from "../get-in-touch/get-in-touch";
 import artsyIntro from "./artsy-intro.png";
 import artsyContext from "./artsy-context.png";
-import artsyImpact from "./artsy-impact.png";
 import artsyDesignProcess from "./artsy-design-process.svg";
 import sheila from "./artsy-sheila.svg";
 import michael from "./artsy-michael.svg";
@@ -37,8 +37,8 @@ function PageContent() {
         <DesignProcess />
         <DSApproach />
         <Validation />
-        <Results />
-        <GetInTouchSection />
+        <Result />
+        <GetInTouch />
       </div>
       <Footer />
     </>
@@ -138,11 +138,7 @@ function Impact() {
   );
 }
 
-function ContextPill({
-  heading,
-  descriptionOne,
-  descriptionTwo = "",
-}) {
+function ContextPill({ heading, descriptionOne, descriptionTwo = "" }) {
   return (
     <div className="bg-background rounded-[8px] py-[16px] px-[24px]">
       <div className="font-bold text-[20px] leading-[1.5] tracking-[1] text-black">
@@ -158,10 +154,7 @@ function ContextPill({
   );
 }
 
-function ImpactParagraph({
-  heading,
-  description,
-}) {
+function ImpactParagraph({ heading, description }) {
   return (
     <p className="text-black-97">
       <span className="font-bold text-[20px] tracking-[1px] text-black-cc">
@@ -239,7 +232,7 @@ function DesignProcess() {
           <img src={artsyDesignProcess} />
         </div>
       </div>
-      <Spacer height={'xs'} />
+      <Spacer height={"xs"} />
       <div className="flex flex-col md:flex-row gap-[32px]">
         {characters.map(function (data, idx) {
           return <Character key={idx} data={data} />;
@@ -249,9 +242,7 @@ function DesignProcess() {
   );
 }
 
-function Character({
-  data,
-}) {
+function Character({ data }) {
   return (
     <div className="bg-background rounded-[16px] p-[32px]">
       <div className="flex flex-col gap-[16px]">
@@ -401,7 +392,7 @@ function Validation() {
           <img src={artsyValidationMain} />
         </div>
       </div>
-      <Spacer height={'sm'} />
+      <Spacer height={"sm"} />
       <div className="flex flex-col md:flex-row gap-[32px] text-[20px] leading-[36px]">
         {validationData.slice(0, 2).map(function (data, idx) {
           return <ValidationTask key={idx} data={data} />;
@@ -417,9 +408,7 @@ function Validation() {
   );
 }
 
-function ValidationTask({
-  data,
-}) {
+function ValidationTask({ data }) {
   return (
     <div className="flex flex-col gap-[16px] rounded-[16px] bg-background p-[32px] w-full md:max-w-[50%] text-black-97">
       <img src={data.image} />
@@ -446,7 +435,7 @@ function ValidationTask({
   );
 }
 
-function Results() {
+function Result() {
   const resultsData = [
     {
       heading: "Key Takeaways & Impact",
@@ -491,49 +480,10 @@ function Results() {
   ];
 
   return (
-    <div className="w-[calc(100vw-60px)] max-w-[1184px] my-[32px] mx-auto flex flex-col items-start justify-center gap-[32px]">
-      <div className="text-slug tracking-[4px] uppercase text-black-59">
-        Results
-      </div>
-      <div className="text-subheading leading-subheading font-extrabold text-black">
-        Enhancing the Art Buying Experience
-      </div>
-
-      <div className="flex flex-col md:flex-row gap-[32px]">
-        {resultsData.map(function (data, idx) {
-          return <ResultSection key={idx} data={data} />;
-        })}
-      </div>
-    </div>
-  );
-}
-
-function ResultSection({
-  data,
-}) {
-  return (
-    <div className="bg-background rounded-[16px] p-[32px] flex flex-col gap-[32px] text-[20px] leading-[36px] w-full md:max-w-[50%]">
-      <p className="font-bold tracking-[1px] text-black-cc">{data.heading}</p>
-
-      {data.details.map(function (det, idx) {
-        return (
-          <p key={idx}>
-            <span className="font-bold tracking-[1px] text-black-cc">
-              {det.subHeading}
-            </span>
-            <br />
-            <span className="text-black-97">{det.description}</span>
-          </p>
-        );
-      })}
-    </div>
-  );
-}
-
-function GetInTouchSection() {
-  return (
-    <div className="w-[calc(100vw-60px)] max-w-[1184px] my-[32px] mx-auto flex flex-col items-start justify-center gap-[32px]">
-      <GetInTouch />
-    </div>
+    <Results
+      slug={"results"}
+      title={"Enhancing the Art Buying Experience"}
+      resultsData={resultsData}
+    />
   );
 }

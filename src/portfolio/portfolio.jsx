@@ -1,8 +1,8 @@
 import { Navbar } from "../navbar/navbar";
 import { Footer } from "../footer/footer";
 import GetInTouch from "../get-in-touch/get-in-touch";
-import Spacer from '../spacer/spacer';
-import { Showcase } from '../showcase/showcase';
+import Spacer from "../spacer/spacer";
+import { Showcase } from "../showcase/showcase";
 import { PGLinkButton } from "../button/button";
 import "./portfolio.css";
 import profile_image from "./profile.png";
@@ -29,7 +29,10 @@ function PageContent() {
       <div className="w-[calc(100vw-60px)] max-w-[1184px] my-[32px] mx-auto flex flex-col items-center gap-[32px]">
         <Intro />
         <Spacer height={"2xl"} />
-        <Showcase keysToInclude={['artsy', 'gamification']} headline={"my_latest_works"} />
+        <Showcase
+          keysToInclude={["artsy", "ticketing"]}
+          headline={"my_latest_works"}
+        />
         <Work />
         <Skill />
         <GetInTouch />
@@ -157,4 +160,3 @@ function SkillIcon({ icon }) {
     </div>
   );
 }
-
