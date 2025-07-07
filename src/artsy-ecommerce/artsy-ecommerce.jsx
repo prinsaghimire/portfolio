@@ -2,10 +2,12 @@ import { Navbar } from "../navbar/navbar";
 import { Footer } from "../footer/footer";
 import { PGLinkButton } from "../button/button";
 import { Results } from "../results/results";
+import { Showcase } from "../showcase/showcase";
 import Spacer from "../spacer/spacer";
 import GetInTouch from "../get-in-touch/get-in-touch";
 import artsyIntro from "./artsy-intro.png";
 import artsyContext from "./artsy-context.png";
+import artsyImpact from "./artsy-impact.png";
 import artsyDesignProcess from "./artsy-design-process.svg";
 import sheila from "./artsy-sheila.svg";
 import michael from "./artsy-michael.svg";
@@ -38,6 +40,12 @@ function PageContent() {
         <DSApproach />
         <Validation />
         <Result />
+        <div className="w-[calc(100vw-60px)] max-w-[1184px] mt-[32px] mx-auto flex flex-col md:flex-row items-center gap-[32px]">
+          <Showcase
+            keysToInclude={["ticketing", "gamification"]}
+            headline={"my_other_works"}
+          />
+        </div>
         <GetInTouch />
       </div>
       <Footer />
@@ -132,7 +140,7 @@ function Impact() {
         </div>
       </div>
       <div className="md:w-[50%]">
-        <img src={artsyContext} />
+        <img src={artsyImpact} />
       </div>
     </div>
   );

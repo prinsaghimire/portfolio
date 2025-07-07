@@ -4,7 +4,7 @@ import { Results } from "../results/results";
 import { Showcase } from "../showcase/showcase";
 import Spacer from "../spacer/spacer";
 import GetInTouch from "../get-in-touch/get-in-touch";
-import ticketingIntro from "./intro.svg";
+import ticketingIntro from "./intro.png";
 import contextImage from "./context.png";
 import impactImageLight from "./impact_light.png";
 import impactImageDark from "./impact_dark.png";

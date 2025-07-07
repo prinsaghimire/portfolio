@@ -53,9 +53,8 @@ const getHeadline = (headline) => {
 };
 
 export function Showcase({ headline, keysToInclude }) {
-  const filteredData = showcaseData.filter((showcaseItem) =>
-    keysToInclude.includes(showcaseItem.key),
-  );
+  const filteredData = keysToInclude.map(key => showcaseData.find(item => item.key === key)).filter(Boolean);
+
   return (
     <div className="w-full my-[40px] flex flex-col gap-[32px]">
       <div className="w-full font-sfpro-medium font-[500] text-[32px] leading-[44.8px] text-black">
