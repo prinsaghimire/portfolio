@@ -402,7 +402,7 @@ function Result() {
   return (
     <Results
       slug={"results"}
-      title={"Enhancing the Art Buying Experience"}
+      title={"Streamlining ITS Operations"}
       resultsData={resultsData}
     />
   );
