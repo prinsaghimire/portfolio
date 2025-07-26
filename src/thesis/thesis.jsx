@@ -40,9 +40,8 @@ function PageContent() {
 function Intro() {
   return (
     <div className="bg-primary">
-      <Spacer height={"lg"} />
-      <div className="w-[calc(100vw-60px)] max-w-[1184px] mt-[32px] mx-auto flex flex-col sm:flex-row items-center gap-[64px]">
-        <div className="flex flex-col justify-center md:w-[50%]">
+      <div className="w-[calc(100vw-60px)] max-w-[1184px] mt-[32px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-[64px]">
+        <div className="flex flex-col justify-center md:max-w-[50%]">
           <div className="text-slug tracking-[4px] uppercase text-white my-[16px]">
             ONGOING THESIS STUDY
           </div>
@@ -50,11 +49,11 @@ function Intro() {
             Perceptions and Behaviors in Gameplay 
           </div>
         </div>
-        <div className="w-full md:w-[50%]">
+        <div className="w-full md:max-w-[35%]">
           <img src={introImage} className="w-full" />
         </div>
       </div>
-      <Spacer height={"lll"} />
+      <Spacer height={"lg"} />
     </div>
   );
 }

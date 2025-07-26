@@ -31,7 +31,7 @@ function PageContent() {
         <Intro />
         <Spacer height={"2xl"} />
         <Showcase
-          keysToInclude={["thesis", "ticketing", "artsy", "gamification"]}
+          keysToInclude={["ticketing", "artsy", "thesis", "gamification"]}
           headline={"my_latest_works"}
         />
         <Work />
