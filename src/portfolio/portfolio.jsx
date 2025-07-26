@@ -27,10 +27,11 @@ function PageContent() {
   return (
     <>
       <div className="w-[calc(100vw-60px)] max-w-[1184px] my-[32px] mx-auto flex flex-col items-center gap-[32px]">
+        <Spacer height={"2xl"} />
         <Intro />
         <Spacer height={"2xl"} />
         <Showcase
-          keysToInclude={["ticketing", "artsy"]}
+          keysToInclude={["thesis", "ticketing", "artsy", "gamification"]}
           headline={"my_latest_works"}
         />
         <Work />

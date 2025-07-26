@@ -152,21 +152,21 @@ function Impact() {
         </div>
         <div className="flex flex-col rounded-[16px] bg-background p-[32px] gap-[16px] font-normal text-[20px] leading-[36px]">
           <ImpactParagraph
-            heading={"Simplified Workflows Through Interface Design:"}
+            heading={"Designed for Clarity and Efficiency:"}
             description={
-              "Collaborated with the project lead to design a clear, user-friendly interface for easy ticket entry, updates, and delegation resulting in 30% faster ticket handling."
+              "Delivered a clean, functional interface with dynamic filters and delegation features that cut confusion, minimized handoffs, and accelerated ticket handling by 50%."
             }
           />
           <ImpactParagraph
             heading={"Implemented Responsive UI Styles:"}
             description={
-              "Developed mobile-responsive CSS layouts to ensure the system worked seamlessly on all screen sizes, enabling access across devices and field environments."
+              "Utilized Claude AI to generate and prototype mobile-responsive CSS layouts, ensuring the system worked seamlessly across all screen sizes and devices, including field environments."
             }
           />
           <ImpactParagraph
-            heading={"Designed for Clarity and Scalability:"}
+            heading={"Accelerated Development Process:"}
             description={
-              "Designed a ticket interface with filters for status, priority, and assignee, improving clarity and reducing manual coordination."
+              "By integrating Claude AI, I reduced the CSS iteration cycle by 25%, cutting trial-and-error and enabling faster, more varied design exploration within the project timeline."
             }
           />
         </div>
@@ -255,15 +255,15 @@ function DSApproach() {
   return (
     <div className="w-[calc(100vw-60px)] max-w-[1184px] my-[32px] mx-auto flex flex-col md:flex-row items-center justify-center gap-[32px]">
       <div className="flex flex-col gap-[32px] w-full xl:max-w-[40%]">
-        <div className="text-slug tracking-[4px] uppercase text-center text-black-59">
+        <div className="text-slug tracking-[4px] uppercase center text-black-59">
           Design Process
         </div>
-        <div className="text-subheading leading-subheading font-extrabold text-black max-w-[750px] text-center">
+        <div className="text-subheading leading-subheading font-extrabold text-black max-w-[750px] center">
           Structuring the Experience
         </div>
-        <div className="text-black-97 text-[20px] leading-[36px] text-center">
+        <div className="text-black-97 text-[20px] leading-[36px] center">
           {
-            "After determining the key user needs, we broke down the workflows into four core functions:"
+            "After identifying key user needs, we structured the system around four core functions. I leveraged Claude AI for rapid CSS prototyping and issue-solving, which enabled faster iterations, smoother development, and a more refined user experience."
           }
         </div>
       </div>
@@ -334,6 +334,10 @@ function DesignSolution() {
       <div className="text-subheading leading-subheading font-extrabold text-black max-w-[750px] text-center">
         How we overcame The Challenge
       </div>
+      <div className="text-black-97 text-center text-[20px] leading-[36px] max-w-[850px]">
+        By integrating clear UI patterns and leveraging AI-assisted CSS prototyping, we quickly developed a responsive and scalable interface that balanced robust functionality with ease of use.
+      </div>
+      <Spacer height={"xs"} />
       <div className="hidden md:flex flex-col gap-[64px] bg-background rounded-[16px] p-[24px]">
         <AdaptiveImage lightImage={dsOneFullLight} darkImage={dsOneFullDark} />
         <AdaptiveImage lightImage={dsTwoFullLight} darkImage={dsTwoFullDark} />
@@ -375,6 +379,11 @@ function Result() {
           description:
             "Delegation features and asset links reduced confusion around who’s responsible for what, improving internal coordination.",
         },
+        {
+          subHeading: "AI for Faster and More Flexible Development:",
+          description:
+            "Claude AI enabled quicker CSS iterations and troubleshooting, increasing styling productivity by an estimated 25%. This allowed the project to test more design options and deliver a polished interface on schedule with fewer bottlenecks.",
+        },
       ],
     },
     {
@@ -394,6 +403,11 @@ function Result() {
           subHeading: "Understanding the Real-world Constraints:",
           description:
             "Designing for university systems meant keeping usability high even within technical limitations.",
+        },
+        {
+          subHeading: "Leveraging AI as a Design & Development Partner:",
+          description:
+            "Collaborating with Claude AI accelerated CSS brainstorming, iteration, and troubleshooting, demonstrating how AI can effectively enhance both creativity and development efficiency.",
         },
       ],
     },

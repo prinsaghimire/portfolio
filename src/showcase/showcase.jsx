@@ -4,13 +4,15 @@ import gamificationLight from "./work_1.png";
 import gamificationDark from "./work_1_dark.png";
 import ticketingLight from './ticketing_showcase_light.png';
 import ticketingDark from './ticketing_showcase_dark.png';
+import thesisLight from './thesis_light.png';
+import thesisDark from './thesis_dark.png';
 import { PGLinkButton } from "../button/button";
 
 const showcaseData = [
   {
     key: "artsy",
     href: "./artsy-ecommerce",
-    slug: "UI/UX Case Study",
+    slug: "UX Case Study",
     lightImage: artsyEcommerceLight,
     darkImage: artsyEcommerceDark,
     description: "Designing an Art E‑Commerce Website Experience",
@@ -31,6 +33,14 @@ const showcaseData = [
     darkImage: ticketingDark,
     description: "Reimagining Tech Support: A Ticketing System for ETSU ITS",
   },
+  {
+    key: "thesis",
+    href: "./thesis",
+    slug: "ONGOING THESIS STUDY",
+    lightImage: thesisLight,
+    darkImage: thesisDark,
+    description: "Perceptions and Behaviors in Gameplay",
+  }
 ];
 
 const getHeadline = (headline) => {
@@ -88,7 +98,7 @@ function ShowCasePiece({ href, slug, lightImage, darkImage, description }) {
       <div className="my-[16px] my-0 uppercase tracking-[2px] text-black-59 text-[clamp(12px,16px,2vw)]">
         {slug}
       </div>
-      <div className="text-[clamp(20px,28px,4vw)] text-black-97">
+      <div className="text-[clamp(20px,24px,4vw)] text-black-97">
         {description}
       </div>
       <div className="flex-1"></div>

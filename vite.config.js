@@ -16,6 +16,7 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         artsyEcommerce: resolve(__dirname, "artsy-ecommerce.html"),
         ticketingSystem: resolve(__dirname, "ticketing-system.html"),
+        thesis: resolve(__dirname, 'thesis.html'),
       },
     },
   },

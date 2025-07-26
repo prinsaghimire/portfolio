@@ -17,10 +17,11 @@ export function Results({ slug, title, resultsData }) {
   );
 }
 
-function ResultSection({ data }) {
+export function ResultSection({ data }) {
+  console.log(data)
   return (
     <div className="bg-background rounded-[16px] p-[32px] flex flex-col gap-[32px] text-[20px] leading-[36px] w-full md:max-w-[50%]">
-      <p className="font-bold tracking-[1px] text-black-cc">{data.heading}</p>
+    {data.heading && <p className="font-bold tracking-[1px] text-black-cc">{data.heading}</p>}
 
       {data.details.map(function (det, idx) {
         return (

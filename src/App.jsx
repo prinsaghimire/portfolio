@@ -1,6 +1,7 @@
 import { Portfolio } from "./portfolio/portfolio";
 import { ArtsyEcommerce } from "./artsy-ecommerce/artsy-ecommerce";
 import { TicketingSystem } from "./ticketing-system/ticketing-system";
+import { Thesis } from './thesis/thesis';
 import { PageContext } from "./pageContext";
 
 export default function App({ page }) {
@@ -14,6 +15,8 @@ export default function App({ page }) {
         return <ArtsyEcommerce />;
       case "ticketing-system":
         return <TicketingSystem />;
+      case "thesis":
+        return <Thesis />
       default:
         return <Portfolio />;
     }
