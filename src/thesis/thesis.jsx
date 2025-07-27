@@ -40,13 +40,13 @@ function PageContent() {
 function Intro() {
   return (
     <div className="bg-primary">
-      <div className="w-[calc(100vw-60px)] max-w-[1184px] mt-[32px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-[64px]">
-        <div className="flex flex-col justify-center md:max-w-[50%]">
+      <div className="w-[calc(100vw-60px)] max-w-[1184px] mt-[32px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-[32px]">
+        <div className="flex flex-col justify-center md:max-w-[65%]">
           <div className="text-slug tracking-[4px] uppercase text-white my-[16px]">
             ONGOING THESIS STUDY
           </div>
           <div className="text-[clamp(36px,64px,6vw)] leading-[calc(clamp(36px,64px,6vw)*1.4)] font-sfpro-bold text-white">
-            Perceptions and Behaviors in Gameplay 
+            {"Exploring Motivation: Self\u2011Perception vs. Real Behavior in Gameplay"}
           </div>
         </div>
         <div className="w-full md:max-w-[35%]">
@@ -79,14 +79,15 @@ function Context() {
         <div className="flex flex-col md:flex-row gap-[16px] items-stretch justify-between">
           <ContextPill
             heading={"My Role"}
-            descriptionOne={"Researcher/Analyst"}
+            descriptionOne={"Researcher"}
+            descriptionTwo={"Analyst"}
           />
           <ContextPill
             heading={"Team"}
             descriptionOne={"1 Researcher"}
             descriptionTwo={"1 Supervisor"}
           />
-          <ContextPill heading={"Time"} descriptionOne={"Ongoing Thesis"} />
+          <ContextPill heading={"Time"} descriptionOne={"Ongoing"} descriptionTwo={"Thesis"} />
         </div>
       </div>
     </div>

@@ -16,6 +16,7 @@ const showcaseData = [
     lightImage: artsyEcommerceLight,
     darkImage: artsyEcommerceDark,
     description: "Designing an Art E‑Commerce Website Experience",
+    btnText: 'View Case Study',
   },
   {
     key: "gamification",
@@ -24,6 +25,7 @@ const showcaseData = [
     lightImage: gamificationLight,
     darkImage: gamificationDark,
     description: "Gamifying a Coffee Ordering App To increase user engagement",
+    btnText: 'View Case Study',
   },
   {
     key: "ticketing",
@@ -32,6 +34,7 @@ const showcaseData = [
     lightImage: ticketingLight,
     darkImage: ticketingDark,
     description: "Reimagining Tech Support: A Ticketing System for ETSU ITS",
+    btnText: 'View Case Study',
   },
   {
     key: "thesis",
@@ -39,7 +42,8 @@ const showcaseData = [
     slug: "ONGOING THESIS STUDY",
     lightImage: thesisLight,
     darkImage: thesisDark,
-    description: "Perceptions and Behaviors in Gameplay",
+    description: "Exploring Motivation: Self\u2011Perception vs. Real Behavior in Gameplay",
+    btnText: 'View More',
   }
 ];
 
@@ -80,6 +84,7 @@ export function Showcase({ headline, keysToInclude }) {
               lightImage={data.lightImage}
               darkImage={data.darkImage}
               description={data.description}
+              btnText={data.btnText}
             />
           );
         })}
@@ -88,7 +93,7 @@ export function Showcase({ headline, keysToInclude }) {
   );
 }
 
-function ShowCasePiece({ href, slug, lightImage, darkImage, description }) {
+function ShowCasePiece({ href, slug, lightImage, darkImage, description, btnText }) {
   return (
     <div className="w-full sm:max-w-[calc(50%-16px)] flex flex-col">
       <a href={href} target="_blank">
@@ -102,7 +107,7 @@ function ShowCasePiece({ href, slug, lightImage, darkImage, description }) {
         {description}
       </div>
       <div className="flex-1"></div>
-      <PGLinkButton btnText={"View Case Study"} btnLink={href} />
+      <PGLinkButton btnText={btnText} btnLink={href} />
     </div>
   );
 }
