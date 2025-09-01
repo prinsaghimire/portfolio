@@ -30,7 +30,7 @@ const showcaseData = [
   {
     key: "ticketing",
     href: "./ticketing-system",
-    slug: "UI DESIGN CASE STUDY",
+    slug: "PRODUCT CASE STUDY",
     lightImage: ticketingLight,
     darkImage: ticketingDark,
     description: "Reimagining Tech Support: A Ticketing System for ETSU ITS",

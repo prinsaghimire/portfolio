@@ -74,7 +74,7 @@ function Intro() {
       <div className="w-[calc(100vw-60px)] max-w-[1184px] mt-[32px] mx-auto flex flex-col md:flex-row items-center gap-[32px]">
         <div className="flex flex-col justify-center md:w-[60%]">
           <div className="text-slug tracking-[4px] uppercase text-white my-[16px]">
-            UI DESIGN CASE STUDY
+            PRODUCT CASE STUDY
           </div>
           <div className="text-[clamp(36px,64px,6vw)] leading-[calc(clamp(36px,64px,6vw)*1.4)] font-sfpro-bold text-white">
             Reimagining Tech Support: A Ticketing System for ETSU ITS
