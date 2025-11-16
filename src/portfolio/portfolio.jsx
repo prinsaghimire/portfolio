@@ -103,7 +103,7 @@ function Work() {
   return (
     <div className="my-[40px] flex flex-col sm:flex-row gap-[32px] justify-between items-center animate-[fade-in_2s_ease-out_1]">
       <div className="w-full sm:w-[50%] sm:max-w-[50%] font-sfpro-medium text-[32px] font-[500] leading-[44.8px] align-left text-black pr-[32px]">
-        Hi! I’m Prinsa, a designer with 4+ years of experience designing{" "}
+        Hi! I’m Prinsa, a designer with 5 years of experience designing{" "}
         <span className="text-primary">user-centric solutions for</span> diverse
         industries.
       </div>
