@@ -7,6 +7,7 @@ import { ResultSection } from "../results/results";
 import timelineImage from './timeline.png';
 import { Showcase } from "../showcase/showcase";
 import Spacer from "../spacer/spacer";
+import { PGLinkButton } from "../button/button";
 
 export function Thesis() {
   return (
@@ -24,6 +25,28 @@ function PageContent() {
         <Intro />
         <Context />
         <Timeline />
+
+        <div className="w-[calc(100vw-60px)] max-w-[1184px] my-[32px] mx-auto">
+
+          <div className="flex flex-col gap-[32px] w-full">
+            <div className="text-slug tracking-[4px] uppercase text-black-59">
+              RESULTS
+            </div>
+            <div className="text-subheading leading-subheading font-extrabold text-black">
+              {"Current Status*"}
+            </div>
+
+            <div className="bg-background rounded-[16px] p-[32px] text-black-97 text-[20px] leading-[36px]">
+              <div>
+                This thesis is currently being prepared for journal publication, with public access planned for July 2027. To support the ongoing publication process, the full text will be available at the link below starting on that date. Thank you for your interest in this research!
+              </div>
+              <PGLinkButton
+                btnLink={"https://dc.etsu.edu/etd/4652/"}
+                btnText={"Link to the Report"}
+              />
+            </div>
+          </div>
+        </div>
         <GetInTouch />
         <div className="w-[calc(100vw-60px)] max-w-[1184px] mt-[32px] mx-auto flex flex-col md:flex-row items-center gap-[32px]">
           <Showcase
@@ -43,7 +66,7 @@ function Intro() {
       <div className="w-[calc(100vw-60px)] max-w-[1184px] mt-[32px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-[32px]">
         <div className="flex flex-col justify-center md:max-w-[65%]">
           <div className="text-slug tracking-[4px] uppercase text-white my-[16px]">
-            ONGOING THESIS STUDY
+            THESIS STUDY
           </div>
           <div className="text-[clamp(36px,64px,6vw)] leading-[calc(clamp(36px,64px,6vw)*1.4)] font-sfpro-bold text-white">
             {"Exploring Motivation: Self\u2011Perception vs. Real Behavior in Gameplay"}
@@ -87,7 +110,7 @@ function Context() {
             descriptionOne={"1 Researcher"}
             descriptionTwo={"1 Supervisor"}
           />
-          <ContextPill heading={"Time"} descriptionOne={"Ongoing"} descriptionTwo={"Thesis"} />
+          <ContextPill heading={"Time"} descriptionOne={"1 Year"} descriptionTwo={""} />
         </div>
       </div>
     </div>
@@ -115,16 +138,16 @@ function Timeline() {
     heading: "",
     details: [
       {
-        subHeading: " Participant Onboarding and Self\u2011Assessment:",
-        description: "Participants are recruited via social media and complete a Qualtrics questionnaire, including the Hexad Scale to determine player type and session eligibility.",
+        subHeading: "Participant Onboarding and Self\u2011Assessment:",
+        description: "Participants were recruited via social media and were asked to complete a Qualtrics questionnaire, including the Hexad Scale to determine player type and session eligibility.",
       },
       {
         subHeading: "Gameplay Observation and Interviews:",
-        description: "In 1.5\u20112 hour sessions (in-person or via Zoom), participants play a game of their choice while thinking aloud and responding to semi-structured interview questions. Sessions are recorded and transcribed for analysis.",
+        description: "In 1.5\u20112 hour sessions (in-person or via Zoom), participants were asked to respond to semi-structured interview questions. They, then, played Baldur's Gate while thinking aloud. Those Sessions were recorded and transcribed for analysis.",
       },
       {
         subHeading: "Thematic Analysis and Validation:",
-        description: "Qualitative data is coded through open and focused coding. Themes are refined through constant comparison and validated with participants via member-checking.",
+        description: "Qualitative data was coded through open and focused coding. Themes were refined through constant comparison and validated with participants via member-checking.",
       }
     ]
   }
@@ -136,10 +159,10 @@ function Timeline() {
 
         <div className="flex flex-col gap-[32px] w-full md:max-w-[50%]">
           <div className="text-slug tracking-[4px] uppercase text-black-59">
-            {"CURRENT TIMELINE"}
+            {"TIMELINE"}
           </div>
           <div className="text-subheading leading-subheading font-extrabold text-black">
-            {"Work In Progress"}
+            {"Methodology"}
           </div>
           <div className="bg-background rounded-[16px] p-[32px] flex flex-col gap-[32px] text-[20px] leading-[36px]">
             {timelineData.details.map(function (det, idx) {

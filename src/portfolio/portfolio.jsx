@@ -31,7 +31,7 @@ function PageContent() {
         <Intro />
         <Spacer height={"2xl"} />
         <Showcase
-          keysToInclude={["ticketing", "thesis", "artsy", "gamification"]}
+          keysToInclude={["ticketing", "artsy", "thesis", "gamification"]}
           headline={"my_latest_works"}
         />
         <Work />
@@ -111,8 +111,7 @@ function Work() {
         <div className="font-[400] text-[20px] leading-[36px] text-black-97">
           My journey includes roles at startups and global teams, specializing
           in designing wireframes, user flows, and accessible prototypes.
-          Currently pursuing a Master’s in Information Systems at ETSU, I’m
-          passionate about mentoring designers and sharing insights on
+          I’m also passionate about mentoring designers and sharing insights on
           accessibility and design systems.
         </div>
         <PGLinkButton

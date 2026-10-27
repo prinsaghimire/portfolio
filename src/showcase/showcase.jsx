@@ -39,7 +39,7 @@ const showcaseData = [
   {
     key: "thesis",
     href: "./thesis",
-    slug: "ONGOING THESIS STUDY",
+    slug: "THESIS STUDY",
     lightImage: thesisLight,
     darkImage: thesisDark,
     description: "Exploring Motivation: Self\u2011Perception vs. Real Behavior in Gameplay",
